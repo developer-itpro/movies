@@ -338,7 +338,7 @@ function MovieDetails({
                 </>
               ) : (
                 <p>
-                  You rated this movie {watchedUserRating}
+                  Sie haben diesen Film bewertet {watchedUserRating}
                   <span>⭐</span>
                 </p>
               )}
