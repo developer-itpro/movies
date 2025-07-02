@@ -27,6 +27,9 @@
 }
 
 @media (max-width: 600px) {
+  body {
+    padding-top: 60px; /* adjust to match banner height + spacing */
+  }
   .github-banner {
     top: 16px;
     bottom: auto;
