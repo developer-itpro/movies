@@ -25,3 +25,14 @@
   color: #00ff88;
   text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88;
 }
+
+@media (max-width: 600px) {
+  .github-banner {
+    top: 16px;
+    bottom: auto;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    max-width: calc(100% - 32px);
+  }
+}
