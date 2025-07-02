@@ -383,3 +383,66 @@ EMPTY STAR
 </svg>
 
 */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .nav-bar {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1.2rem;
+    padding: 1.6rem;
+    text-align: center;
+  }
+
+  .search {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+
+  .num-results {
+    justify-self: center;
+    margin-top: 0.8rem;
+  }
+
+  .main {
+    flex-direction: column;
+    height: auto;
+    margin-top: 1.2rem;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 100%;
+    max-height: 60vh;
+  }
+
+  .details header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details section {
+    padding: 2rem;
+  }
+
+  .details img {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
+
+  .summary {
+    padding: 1.6rem;
+  }
+
+  .btn-back {
+    top: 0.4rem;
+    left: 0.4rem;
+    height: 2.8rem;
+    font-size: 2rem;
+  }
+}
