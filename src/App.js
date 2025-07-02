@@ -140,7 +140,7 @@ function Search({ query, setQuery }) {
       ref={inputEl}
       className="search"
       type="text"
-      placeholder="Search movies..."
+      placeholder="Filme suchen..."
       value={query}
       onChange={(e) => setQuery(e.target.value)}
     />
@@ -170,7 +170,7 @@ function Box({ children }) {
     </div>
   );
 }
-
+/*
 function WatchedBox() {
   //const [watched, setWatched] = useState(tempWatchedData);
   const [isOpen2, setIsOpen2] = useState(true);
@@ -191,7 +191,7 @@ function WatchedBox() {
       )}
     </div>
   );
-}
+}*/
 
 function MovieList({ movies, handleSelectMovie }) {
   return (
@@ -362,7 +362,7 @@ function WatchedSummary({ watched }) {
 
   return (
     <div className="summary">
-      <h2>Movies you watched</h2>
+      <h2>Filme, die Sie gesehen haben</h2>
       <div>
         <p>
           <span>#️⃣</span>
