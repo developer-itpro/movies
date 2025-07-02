@@ -91,3 +91,22 @@
     font-size: 20px;
   }
 }
+
+close-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 16px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #0077ff;
+}
