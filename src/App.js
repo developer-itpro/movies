@@ -7,6 +7,7 @@ import BannerOverlay from "./Banneroverlay";
 import DelayedBannerOverlay from "./DelayedBannerOverlay";
 import WaveEffect from "./WaveEffect";
 import MouseTrail from "./MouseTrail ";
+import GithubBanner from "./GithubBanner";
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -87,6 +88,7 @@ export default function App() {
           )}
         </Box>
       </Main>
+      <GithubBanner />
     </>
   );
 }
