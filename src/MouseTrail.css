@@ -1,0 +1,56 @@
+/* Keep arrow visible */
+body {
+  /* cursor: none; */
+}
+
+/* Smooth glowing green follower */
+.glow-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 255, 136, 0.4);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.3), 0 0 16px rgba(0, 255, 136, 0.25),
+    0 0 24px rgba(0, 255, 136, 0.2);
+  mix-blend-mode: screen;
+  transition: all 0.4s ease;
+}
+
+/* Upgraded RGB aura */
+.rgb-glow {
+  width: 27.6px;
+  height: 27.6px;
+  opacity: 0.55;
+  background: transparent;
+  box-shadow: 0 0 12px red, 0 0 18px orange, 0 0 24px yellow, 0 0 30px green,
+    0 0 36px blue, 0 0 42px indigo, 0 0 48px violet;
+}
+
+/* Floating message */
+.glow-message {
+  position: fixed;
+  transform: translate(-50%, -150%);
+  font-size: 16px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #00ff88;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 100000;
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+  text-shadow: 0 0 2px #00ff88, 0 0 5px #00ff88, 0 0 10px #00ff88,
+    0 0 20px #00ff88;
+}
+
+/* Highlight the name "Boban" */
+.matrix-name {
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88;
+}

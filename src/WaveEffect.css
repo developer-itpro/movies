@@ -1,0 +1,109 @@
+.wave-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 255, 255, 0.3),
+    transparent 60%
+  );
+  opacity: 0;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+}
+
+/* Glow & trailing blur */
+.wave::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.3),
+    transparent 60%
+  );
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.wave-overlay.visible .wave::after {
+  opacity: 1;
+}
+
+/* Subtle sparkles drifting */
+.wave::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.05;
+  animation: sparkleTrail 1s linear forwards;
+}
+
+@keyframes sparkleTrail {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(-30%, 30%);
+    opacity: 0;
+  }
+}
+
+/* Diagonal fly-in: top-right ➜ bottom-left */
+.wave-a {
+  transform: rotate(-30deg) translate(100%, -100%);
+}
+
+.wave-overlay.visible .wave-a {
+  animation: flyWaveA 1s ease-out forwards;
+}
+
+@keyframes flyWaveA {
+  from {
+    transform: rotate(-30deg) translate(100%, -100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: rotate(-30deg) translate(-50%, 50%);
+    opacity: 0;
+  }
+}
+
+/* Diagonal fly-in: top-left ➜ bottom-right */
+.wave-b {
+  transform: rotate(30deg) translate(-100%, -100%);
+}
+
+.wave-overlay.visible .wave-b {
+  animation: flyWaveB 1s ease-out forwards;
+}
+
+@keyframes flyWaveB {
+  from {
+    transform: rotate(30deg) translate(-100%, -100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: rotate(30deg) translate(50%, 50%);
+    opacity: 0;
+  }
+}
