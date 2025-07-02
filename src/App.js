@@ -332,7 +332,7 @@ function MovieDetails({
 
                   {userRating > 0 && (
                     <button className="btn-add" onClick={handleAdd}>
-                      +Add to list
+                      +Zur Liste hinzufügen
                     </button>
                   )}
                 </>
